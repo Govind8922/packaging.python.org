@@ -1,0 +1,15 @@
+import requests
+
+# URL to access
+url = "https://diunwin.com/wallet"
+
+# Send a GET request to the website
+response = requests.get(url)
+
+# Check if the request was successful (status code 200)
+if response.status_code == 200:
+    print("Successfully accessed the page!")
+    # Print the raw HTML content of the page
+    print(response.text)
+else:
+    print(f"Failed to access the page. Status code: {response.status_code}")
