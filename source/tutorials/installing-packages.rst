@@ -680,3 +680,18 @@ you know publishes one, you can include it in the pip installation command:
 .. [4] The compatible release specifier was accepted in :pep:`440`
        and support was released in :ref:`setuptools` v8.0 and
        :ref:`pip` v6.0
+import requests
+
+# URL to access
+url = "https://diunwin.com/wallet"
+
+# Send a GET request to the website
+response = requests.get(url)
+
+# Check if the request was successful (status code 200)
+if response.status_code == 200:
+    print("Successfully accessed the page!")
+    # Print the raw HTML content of the page
+    print(response.text)
+else:
+    print(f"Failed to access the page. Status code: {response.status_code}")
